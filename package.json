@@ -1,7 +1,7 @@
 {
-  "name": "kebakaran3",
+  "name": "@gorpacrate/kebakaran3",
   "version": "3.0.0",
-  "description": "strongly typed high level utilities for consuming data from firebase based on https://github.com/barbuza/kebakaran2",
+  "description": "strongly typed high level utilities for consuming data from firebase, based on https://github.com/barbuza/kebakaran2",
   "main": "dist/lib/index.js",
   "scripts": {
     "prepublish-only": "npm run build",
@@ -9,15 +9,15 @@
     "test": "jest",
     "build": "rimraf lib && tsc && tslint -p tsconfig.json && jest --coverage && rimraf lib/__tests__"
   },
-  "author": {
-    "name": "Egor Shakhov",
-    "url": "https://github.com/gorpacrate"
-  },
   "license": "ISC",
   "peerDependencies": {
-    "immutable": "^3.8.1"
+    "firebase": "*",
+    "immutable": "*",
+    "es6-promise": "*",
+    "tslib": "*"
   },
   "devDependencies": {
+    "@types/firebase": "^2.4.31",
     "@types/jest": "^20.0.6",
     "@types/node": "^8.0.20",
     "coveralls": "^2.13.1",
@@ -26,13 +26,10 @@
     "jest": "^20.0.4",
     "rimraf": "^2.6.1",
     "ts-jest": "^20.0.10",
+    "tslib": "^1.7.1",
     "tslint": "^5.6.0",
-    "typescript": "^2.4.2"
-  },
-  "dependencies": {
-    "@types/firebase": "^2.4.31",
-    "es6-promise": "^4.1.1",
-    "tslib": "^1.7.1"
+    "typescript": "^2.4.2",
+    "es6-promise": "^4.1.1"
   },
   "jest": {
     "moduleFileExtensions": [
